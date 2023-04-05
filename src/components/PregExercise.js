@@ -2,25 +2,27 @@ import React from 'react'
 import { Container, Col, Button, Row } from 'reactstrap'
 import {Card, CardHeader, CardBody, CardImg} from 'reactstrap'
 import { TRIMESTER_EXERCISES } from '../test_data'
+import { useState } from 'react'
 
 
 export default function PregExercise(){
+    const[exerciselist, setexerciselist]= useState(TRIMESTER_EXERCISES)
+    const handleSubmit=()=>{}
+
     return(
         <Container>
             <Row>
-                {TRIMESTER_EXERCISES.map((x,idx)=>{
+                {exerciselist.map((x,idx)=>{
                     return(
                         <Col key={idx}>
-                            <Card style={{width:'20rem'}}>
-                                <CardHeader>{x.exercise}
-                                
-                                </CardHeader>
+                            <Card className='card' style={{width:'20rem'}}>
+                                <CardHeader style={{textAlign:'center'}}>{x.exercise}</CardHeader>
                                 <CardBody>
                                     {x.description}{'\n'}
-                                    <CardImg className='walking' src={x.image} alt={x.name}/>
+                                    <CardImg src={x.image} alt={x.name}/>
                                 <Col>
                                     <br/>
-                                    <Button color='secondary'>+ Add exercise</Button>
+                                    <Button color='warning' onClick={handleSubmit}>+ Add exercise</Button>
                                 </Col>
                             </CardBody>
                             </Card>

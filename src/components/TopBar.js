@@ -1,20 +1,3 @@
-// import React from 'react';
-// import {Navbar, NavbarBrand } from 'reactstrap'
-
-// export default function TopBar(){
-//     return(
-//         <Navbar 
-//             color="info" 
-//             dark
-//             container="fluid"
-//             expand='md'
-//         >
-//             <NavbarBrand href="/">
-//                 Pregnancy App
-//             </NavbarBrand>
-//         </Navbar>
-//     )
-// }
 import { useState } from 'react';
 import {
     Navbar,
@@ -50,8 +33,13 @@ const TopBar = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className='nav-link' to='/food'>
+            <NavLink className='nav-link' to='/snacks'>
               <i className='fa fa-info fa-lg' />Snacks
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className='nav-link' to='/tracker'>
+              <i className='fa fa-info fa-lg' />Tracker
             </NavLink>
           </NavItem>
         </Nav>

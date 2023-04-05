@@ -11,11 +11,6 @@ export default function HomePage(){
                 This app helps you navigate it to your own lifestyle and track which exercises and snacks you have tried and can customize it to fit your own lifestyle and pregnancy. Always consult with your OBGYN when trying new things to make sure it is safe for you and your baby.
             </p>
             <img src={homeimage} className='homeimg'/>
-            <Row>
-                <Col>
-                    <Button color='warning'>+ Add more exercises to any Trimester</Button>
-                </Col>
-            </Row>
         </>
     )
 }

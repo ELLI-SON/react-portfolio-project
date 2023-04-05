@@ -25,3 +25,17 @@ code {
   display:block;
   margin: auto
 }
+
+.card{
+  margin: 10px;
+}
+
+.cardimg{
+  width: 300px;
+  height:300px;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 5px;
+  vertical-align: middle;
+  border-radius: 10px;
+}

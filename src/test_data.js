@@ -2,6 +2,14 @@ import walkingimg from '../src/app/assets/walkingimg.jpeg'
 import cycling from '../src/app/assets/Cycling-While-Pregnant.avif'
 import prenatalyoga from '../src/app/assets/prenatal.webp'
 import swimming from '../src/app/assets/swimming.jpeg'
+import weight from '../src/app/assets/weight.jpeg'
+import dance from '../src/app/assets/dance.jpeg'
+import bananatoast from '../src/app/assets/bananatoast.jpeg'
+import eggs from '../src/app/assets/eggs.jpeg'
+import cheese from '../src/app/assets/cheese.jpeg'
+import yogurt from '../src/app/assets/yogurt.jpg'
+import fruits from '../src/app/assets/fruit.jpeg'
+import smoothie from '../src/app/assets/smoothie.jpeg'
 
 export const TRIMESTER_EXERCISES = [
     {
@@ -28,8 +36,9 @@ export const TRIMESTER_EXERCISES = [
         exercise:"Prenatal yoga",
         description: 'Try a few stretches and breathing techniques with prenatal yoga. Try the cow and cat pose (Begin on all fours with hands shoulder width apart and knees hip-width apart. Inhale and lift breastbone and tailbone toward the sky and then exhale and round the spine in the shape of a rainbow.)',
         poll: 'Did you try it?',
+        answer: ['yes', 'no'],
         image: prenatalyoga,
-        answer: ['yes', 'no']
+        name: 'prenatal yoga'
     },
     {   
         id:3,
@@ -37,33 +46,77 @@ export const TRIMESTER_EXERCISES = [
         description: 'Swimming is safe during all trimesters of pregnancy. It can be very soothing on the joints and other aches and pains. Consider swimming for 30 minutes at a time. Be cautious not to overexert yourself and be mindful of the water temperature.',
         poll: 'Did you try it?',
         image: swimming,
-        answer: ['yes', 'no']
+        answer: ['yes', 'no'],
+        name: 'woman swimming'
+    },
+    {
+        id:4,
+        exercise: "Strength training",
+        description: "Use small weights like 1lbs or 2lbs to help you build muscle. Use the weights in a slow and contolled manner to make sure you don't use any jerky movements.",
+        poll: 'Did you try it?',
+        image: weight,
+        answer: ['yes', 'no'],
+        name: 'woman lighting weights'
+    },
+    {
+        id:5,
+        exercise: "Aerobic/Dance class",
+        description: "Low-impact aerobic or dance class is a great way to get your heart pumping. Just ensure to avoid jumping. As a bonus, babies love when moms listen to music.",
+        poll: 'Did you try it?',
+        image: dance,
+        answer: ['yes', 'no'],
+        name: 'woman dancing'
     }
+
 ]
 
-export const TRIMESTER_POLL = [
+export const PREG_SNACKS = [
     {
         id:0,
-        exerciseId:0,
-        answer: 'yes'
+        snack: 'Banana and Peanut Butter',
+        label: 'This is a healthy source of potassium and protein. Put it in a smoothie, on toast, or eat it together plain. Any way is delicious!',
+        image: bananatoast,
+        name: 'bananas on toast'
         
     },
     {
         id:1,
-        exerciseId:1,
-        answer: 'no'
+        snack: 'Eggs',
+        image: eggs,
+        label: 'You can hard-boil them or fry them. Eat the yolks since this is where most of the nutrients are. Eggs are a great souce of choline which is important for your developing baby. Just make sure to cook it fully!',
+        name: 'hard-boiled eggs'
         
     },
     {
         id:2,
-        exerciseId: 2,
-        answer: 'yes'
+        snack: 'Pasterurized Cheese',
+        image: cheese,
+        label: 'Try cheese with crackers and fruits. Cheese is great for calcium for those bones that the baby is growing.',
+        name: 'crackers with cheese and apples'
         
     },
     {
         id:3,
-        exerciseId: 3,
-        answer: 'no'
+        snack: 'Yogurt',
+        image: yogurt,
+        label: 'Try going for greek yogurt. This is good for digestion and good source of calcium, protein, and dairy.',
+        name: 'greek yogurt'
         
     },
+    {
+        id:4,
+        snack: 'Fresh Fruits',
+        image: fruits,
+        label: 'Fresh fruits like berries are a great and delicious snack. Avoid pre-cut ones since these could harbor bacteria.',
+        name: 'fruits'
+        
+    },
+    {
+        id:4,
+        snack: 'Smoothies',
+        image: smoothie,
+        label: 'Smoothies are great way to get sneak in extra nutrients especially when you are feeling nausesous. You can add some spinach to your smoothie to get some natural folic acid.',
+        name: 'smoothie'
+        
+    }
 ]

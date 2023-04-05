@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import TopBar from './components/TopBar';
 import PregExercise from './components/PregExercise'
 import Snacks from './components/Snacks'
+import Tracker from './components/Tracker.js'
 
 export default function App(){
   return(
@@ -12,7 +13,8 @@ export default function App(){
         <Routes>
           <Route path='/' element ={<HomePage/>}/>
           <Route path='exercises' element ={<PregExercise/>}/>
-          <Route path='food' element ={<Snacks/>}/>
+          <Route path='snacks' element ={<Snacks/>}/>
+          <Route path='tracker' element ={<Tracker/>}/>
         </Routes>
 
     </>
