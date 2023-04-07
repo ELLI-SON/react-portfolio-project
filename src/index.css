@@ -39,3 +39,12 @@ code {
   vertical-align: middle;
   border-radius: 10px;
 }
+
+.pageheader{
+  text-align: center;
+  margin-top: 10px;
+}
+.pagetext{
+  text-align: center;
+  margin-top: 10px;
+}

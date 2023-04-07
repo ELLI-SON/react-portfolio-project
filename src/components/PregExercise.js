@@ -1,20 +1,17 @@
 import React from 'react'
 import { Container, Col, Button, Row } from 'reactstrap'
 import {Card, CardHeader, CardBody, CardImg} from 'reactstrap'
-import { TRIMESTER_EXERCISES } from '../test_data'
-import { useState } from 'react'
 
 
-export default function PregExercise(){
-    const[exerciselist, setexerciselist]= useState(TRIMESTER_EXERCISES)
-    const handleSubmit=()=>{}
-
+export default function PregExercise({exerciselist, move}){
     return(
         <Container>
+            <h1 className='pageheader'>Exercises</h1>
+            <p className='pagetext'>Pick your favorite exercises. Click to add them to your Tracker!</p>
             <Row>
-                {exerciselist.map((x,idx)=>{
+                {exerciselist.map((x)=>{
                     return(
-                        <Col key={idx}>
+                        <Col key={x.id}>
                             <Card className='card' style={{width:'20rem'}}>
                                 <CardHeader style={{textAlign:'center'}}>{x.exercise}</CardHeader>
                                 <CardBody>
@@ -22,7 +19,8 @@ export default function PregExercise(){
                                     <CardImg src={x.image} alt={x.name}/>
                                 <Col>
                                     <br/>
-                                    <Button color='warning' onClick={handleSubmit}>+ Add exercise</Button>
+                                    {!x.favorite ? <Button color='warning' onClick={()=> move(x.id)}>+ Add exercise</Button> : <Button color='danger'>Favorited!</Button>}
+                                    
                                 </Col>
                             </CardBody>
                             </Card>

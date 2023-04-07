@@ -19,7 +19,8 @@ export const TRIMESTER_EXERCISES = [
         poll:'Did you try it?',
         answer: ['yes', 'no'],
         image: walkingimg,
-        name: 'woman walking'
+        name: 'woman walking',
+      
     },
     {   
         id:1,
@@ -28,7 +29,7 @@ export const TRIMESTER_EXERCISES = [
         poll:'Did you try it?',
         answer: ['yes', 'no'],
         image: cycling,
-        name: 'woman riding a bike'
+        name: 'woman riding a bike',
 
     },
     {   
@@ -76,7 +77,8 @@ export const PREG_SNACKS = [
         snack: 'Banana and Peanut Butter',
         label: 'This is a healthy source of potassium and protein. Put it in a smoothie, on toast, or eat it together plain. Any way is delicious!',
         image: bananatoast,
-        name: 'bananas on toast'
+        name: 'bananas on toast',
+      
         
     },
     {
@@ -84,7 +86,8 @@ export const PREG_SNACKS = [
         snack: 'Eggs',
         image: eggs,
         label: 'You can hard-boil them or fry them. Eat the yolks since this is where most of the nutrients are. Eggs are a great souce of choline which is important for your developing baby. Just make sure to cook it fully!',
-        name: 'hard-boiled eggs'
+        name: 'hard-boiled eggs',
+      
         
     },
     {
@@ -112,7 +115,7 @@ export const PREG_SNACKS = [
         
     },
     {
-        id:4,
+        id:5,
         snack: 'Smoothies',
         image: smoothie,
         label: 'Smoothies are great way to get sneak in extra nutrients especially when you are feeling nausesous. You can add some spinach to your smoothie to get some natural folic acid.',
