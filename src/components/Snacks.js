@@ -10,7 +10,7 @@ export default function PregSnack({snacklist, movesnack}){
             <Row>
                 {snacklist.map((snack)=>{
                     return(
-                        <Col key={snack.id}>
+                        <Col className='row' key={snack.id}>
                             <Card className='card' style={{width:'20rem'}}>
                                 <CardHeader style={{textAlign:'center'}}>{snack.snack}</CardHeader>
                                 <CardImg className='cardimg' src={snack.image} alt={snack.name}/>

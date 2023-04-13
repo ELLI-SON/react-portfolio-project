@@ -48,3 +48,9 @@ code {
   text-align: center;
   margin-top: 10px;
 }
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+

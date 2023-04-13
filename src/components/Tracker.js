@@ -1,7 +1,8 @@
 import React from 'react'
 import {Card, CardHeader,CardBody, Button, CardImg, Row} from 'reactstrap'
 import { Col } from 'reactstrap'
-
+import NoteForm from './NoteForm';
+import { formatDate } from './date';
 
 
 export default function Track({exerciselist, remove, snacklist, removesnack}){
@@ -10,12 +11,12 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
 
     return(
         <>
-        <h2 className='mt-2' style={{textAlign: 'center'}}>These are my favorite ❤️ </h2>
+            <h2 className='mt-2' style={{textAlign: 'center'}}>These are my favorite ❤️ </h2>
         <Card>
             <CardHeader style={{textAlign: 'center'}}>Favorite Exercises</CardHeader>
             <Row>
                 {favoriteExercises.map((x)=>(
-                    <Col key={x.id}>
+                    <Col className='row' key={x.id}>
                         <Card className='card' style={{width:'20rem'}}>
                             <CardHeader style={{textAlign:'center'}}>{x.exercise}</CardHeader>
                             <CardBody>
@@ -24,6 +25,8 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
                             <Col>
                                 <br/>
                                 <Button color='secondary' onClick={()=>remove(x.id)}>Remove exercise</Button>
+                                <NoteForm/>
+                                {formatDate}
                             </Col>
                         </CardBody>
                         </Card>
@@ -33,13 +36,13 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
         </Card> 
         <br/>
         <hr style={{border:"3px solid red"}}/>
-    
+
         <Card>
             <CardHeader style={{textAlign: 'center'}}>Favorite Snacks</CardHeader>
             <Row>
-            {favoriteSnacks.map((snack)=>{
+                {favoriteSnacks.map((snack)=>{
                 return(
-                    <Col key={snack.id}>
+                    <Col className='row' key={snack.id}>
                         <Card className='card' style={{width:'20rem'}}>
                             <CardHeader style={{textAlign:'center'}}>{snack.snack}</CardHeader>
                             <CardImg className='cardimg' src={snack.image} alt={snack.name}/>
@@ -48,6 +51,7 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
                             <Col>
                                 <br/>
                                 <Button color='secondary' onClick={()=>removesnack(snack.id)}>Remove Snack</Button>
+                                <NoteForm/>
                             </Col>
                         </CardBody>
                         </Card>
@@ -58,4 +62,4 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
         </Card>`
     </>
     )
-}    
+} 

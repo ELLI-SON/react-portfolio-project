@@ -11,7 +11,7 @@ export default function PregExercise({exerciselist, move}){
             <Row>
                 {exerciselist.map((x)=>{
                     return(
-                        <Col key={x.id}>
+                        <Col className='row' key={x.id}>
                             <Card className='card' style={{width:'20rem'}}>
                                 <CardHeader style={{textAlign:'center'}}>{x.exercise}</CardHeader>
                                 <CardBody>

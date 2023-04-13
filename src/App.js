@@ -7,6 +7,7 @@ import Snacks from './components/Snacks'
 import Tracker from './components/Tracker.js'
 import { TRIMESTER_EXERCISES } from './test_data'
 import { PREG_SNACKS} from './test_data'
+import NoteForm from './components/NoteForm'
 
 
 export default function App(){
