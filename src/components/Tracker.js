@@ -2,7 +2,7 @@ import React from 'react'
 import {Card, CardHeader,CardBody, Button, CardImg, Row} from 'reactstrap'
 import { Col } from 'reactstrap'
 import NoteForm from './NoteForm';
-import { formatDate } from './date';
+
 
 
 export default function Track({exerciselist, remove, snacklist, removesnack}){
@@ -26,7 +26,9 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
                                 <br/>
                                 <Button color='secondary' onClick={()=>remove(x.id)}>Remove exercise</Button>
                                 <NoteForm/>
-                                {formatDate}
+                                <Row>
+                                    {}
+                                </Row>
                             </Col>
                         </CardBody>
                         </Card>
@@ -60,6 +62,11 @@ export default function Track({exerciselist, remove, snacklist, removesnack}){
             })}
             </Row>
         </Card>`
+    
+        <hr style={{border:"3px solid red"}}/>
+        <Card>
+
+        </Card>
     </>
     )
 } 

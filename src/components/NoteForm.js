@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button, Label, Col, FormGroup, Modal, ModalBody, ModalHeader } from 'reactstrap';
-import { Formik, Field, Form, ErrorMessage, validateYupSchema} from 'formik';
+import { Button, Label, FormGroup, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import { Formik, Field, Form} from 'formik';
 
 
 
@@ -19,7 +19,7 @@ const NoteForm = () => {
     }
     return(
         <>
-            <Button color= 'success' onClick={()=> setModalOpen(true)}> Add Notes</Button>
+            <Button color= 'success' style={{marginLeft: 10}} onClick={()=> setModalOpen(true)}> Add Notes</Button>
             <Modal isOpen={modalOpen}>
                 <ModalHeader toggle={()=> setModalOpen(false)}>Add Notes</ModalHeader>
                 <ModalBody>
@@ -48,9 +48,9 @@ const NoteForm = () => {
                                 </Field>
                             </FormGroup>
                             <FormGroup>
-                                <Label htmlFor='notes'>Your Notes</Label>
+                                <Label htmlFor='note'>Your Notes</Label>
                                 <Field
-                                    name='notes'
+                                    name='note'
                                     as='textarea'
                                     rows='8'
                                     placeholder='Your Notes'

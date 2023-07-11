@@ -4,6 +4,7 @@ import {Card, CardHeader, CardBody, CardImg} from 'reactstrap'
 
 
 export default function PregExercise({exerciselist, move}){
+
     return(
         <Container>
             <h1 className='pageheader'>Exercises</h1>
@@ -17,10 +18,11 @@ export default function PregExercise({exerciselist, move}){
                                 <CardBody>
                                     {x.description}{'\n'}
                                     <CardImg src={x.image} alt={x.name}/>
-                                <Col>
+                                <Col class='col-6'>
                                     <br/>
-                                    {!x.favorite ? <Button color='warning' onClick={()=> move(x.id)}>+ Add exercise</Button> : <Button color='danger'>Favorited!</Button>}
-                                    
+                                    <span>
+                                        {!x.favorite ? <Button color='warning' onClick={()=> move(x.id)}>+ Add exercise</Button> : <Button color='danger'>Favorited!</Button>}
+                                    </span>
                                 </Col>
                             </CardBody>
                             </Card>

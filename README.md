@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is a pregnancy app where you can select favorite exercises from the Exercise tab and/or favorite snacks from the Snacks tab. Each selected item will be placed inside the Tracker tab. In order to favorite an exercise or snack, the user must click on the button that says 'Add exercise' or 'Add snack'. This is a single-page application. On the Tracker tab, you can also add notes to your favorite exercise and rate them from 1-5. 
+
 ## Available Scripts
 
 In the project directory, you can run:

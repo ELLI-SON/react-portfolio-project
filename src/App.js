@@ -7,7 +7,7 @@ import Snacks from './components/Snacks'
 import Tracker from './components/Tracker.js'
 import { TRIMESTER_EXERCISES } from './test_data'
 import { PREG_SNACKS} from './test_data'
-import NoteForm from './components/NoteForm'
+
 
 
 export default function App(){
@@ -47,6 +47,7 @@ export default function App(){
       ))
     }
 
+
   return(
     <>
       <TopBar/>
@@ -56,7 +57,6 @@ export default function App(){
           <Route path='snacks' element ={<Snacks snacklist={snacklist} movesnack={moveSnacktoTracker}/>}/>
           <Route path='tracker' element ={<Tracker exerciselist={exerciselist} snacklist={snacklist} remove={removeFromTracker} removesnack={removeSnackFromTracker}/>}/>
         </Routes>
-
     </>
   )
 }
